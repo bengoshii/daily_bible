@@ -4,23 +4,8 @@ import sqlite3
 import sys
 from time import *
 
-#number="491706363320-1483136405"
-
 conn = sqlite3.connect('bibel.sql')
 c = conn.cursor()
-"""
-c.execute('SELECT * FROM control')
-all_rows_control = c.fetchall()
-row_control = all_rows_control[0]
-control_date = row_control[0]
-control_sent = row_control[1]
-lt = localtime()
-year, month, day = lt[0:3]
-print("lt: ", lt)
-print("Datum: ", year,"-",month,"-",day)
-print("control_date: ", control_date)
-print("control_sent: ", control_sent)
-"""
 
 c.execute('SELECT * FROM users')
 all_rows_user = c.fetchall()
